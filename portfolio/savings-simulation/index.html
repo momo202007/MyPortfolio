@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>目標電卓</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- 入力欄 -->
+    <div class="input-area">
+      <!-- テキストエリア -->
+      <input type="text" id="price" placeholder="目標金額">
+      <input type="text" id="num" placeholder="目標年数">
+      <!-- セレクトボックス -->
+      <select id="unit">
+        <option hidden>貯金単位</option>
+        <option value="0">選択しない</option>
+        <option value="100">100円単位</option>
+        <option value="500">500円単位</option>
+        <option value="1000">1,000円単位</option>
+        <option value="10000">10,000円単位</option>
+      </select>
+      <div id="btn" class="disabled">計算</div>
+    </div>
+    <!-- 出力 -->
+    <div class="result-area">
+      <p id="result">ここに結果を表示します</p>
+      <div id="reset" class="hid">もう一度計算</div>
+    </div>
+    <!-- イラスト -->
+    <img src="chokinbako.png" alt="ぶたの貯金箱">
+  </div>
+  
+  <!-- JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

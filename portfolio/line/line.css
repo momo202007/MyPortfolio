@@ -1,0 +1,173 @@
+@charset "UTF-8";
+
+/* 全体のレイアウト */
+#content {
+    /* 横幅50％ */
+    width: 50%;
+    /* 中央揃え */
+    margin: 30px auto;
+}
+
+
+/* 見出し */
+h2 {
+    color: #6cb4e4;
+    text-align: center;
+    padding: 0.25em;
+    border-top: solid 2px #6cb4e4;
+    background: -webkit-repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px, #e9f4ff 3px, #e9f4ff 7px);
+    background: repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px, #e9f4ff 3px, #e9f4ff 7px);
+}
+
+
+/* タイトル */
+#chat-title {
+    background: #273246;
+    padding: 10px;
+    text-align: center;
+    font-size: 150%;
+    color: #fff;
+}
+
+
+/* チャットエリアを表示 */
+#chat-area {
+    /* チャット画面サイズ */
+    height: 80vh;
+    /* チャット画面色 */
+    background: #8db4e5;
+    /* スクロールバー */
+    overflow: scroll;
+}
+
+
+/* メッセージ入力欄と送信ボタン */
+#message-area {
+    /* 高さ */
+    height: 10vh;
+    /* 横並びに設置 */
+    display: flex;
+}
+/* 入力欄は80％ */
+.message-text {
+    width: 80%;
+}
+/* 送信ボタンは20％ */
+.message-button {
+    width: 20%;
+}
+
+/* 入力欄の装飾 */
+.message-text textarea {
+    /* 送信ボタンとの隙間をなくす */
+    width: 100%;
+    /* 入力欄エリアを広くする */
+    height: 80%;
+    /* ユーザーがリサイズ不可能にする */
+    resize: none;
+    /* 枠線をつけ、色を変更 */
+    border: 1px solid #ddd;
+    /* 送信ボタンとの被りを解除(ボーダーを入力欄に含める) */
+    box-sizing: border-box;
+}
+
+/* 送信ボタンの装飾 */
+.message-button button {
+    /* 送信ボタンを範囲内のサイズで調整 */
+    width: 100%;
+    height: 50%;
+    /* チャットエリアから離す */
+    margin: 8% 0;
+    /* ボタンの色 */
+    background: #88B3C7;
+    /* 「送信」文字の各種調整 */
+    color: #F0F0F0;
+    font-weight: bold;
+    /* 枠線をなくす */
+    border: 0;
+}
+
+/* 入力した文字を表示 */
+.chat-message {
+    /* はみ出したら改行 */
+    max-width: 300px;
+    word-break: break-all;
+    /* 角を丸くする */
+    border-radius: 20px;
+    padding: 10px 30px;
+    /* 背景色を緑色にする */
+    background: #61e739;
+    /* 文字の調整 */
+    color: #001a32;
+    font-weight: bold;
+}
+
+
+/* メッセージと時間のdiv */
+.message-container {
+    /* 横並びにする */
+    display: flex;
+    margin: 0 10px;
+}
+/* 「相手」の場合は左寄せ */
+.container-you {
+    justify-content: flex-start;
+}
+/* 「自分」の場合は右寄せ */
+.container-me {
+    justify-content: flex-end;
+}
+
+/* メッセージ送信時間 */
+.chat-time {
+    margin-right: 10px;
+    /* 薄グレー色へ変更 */
+    color: #33415b;
+    /* 最下部に表示 */
+    align-self: flex-end;
+}
+/* 「相手」の場合は、時間をメッセージの後へ */
+.container-you .chat-time {
+    /* flex-boxの中で最後 */
+    order: 2;
+    margin-left: 10px;
+}
+/* 「相手」の場合は、背景色を白色 */
+.container-you .chat-message {
+    background-color: #fff;
+}
+
+/* 「自分」の場合 */
+.container-me .chat-time {
+    margin-right: 10px;
+}
+/* 「自分」の場合は、背景色を緑色 */
+.container-me .chat-message {
+    background: #61e739;
+}
+
+
+/* 「自分」「相手」の選択 */
+/* 横並びにする */
+#message-person {
+    display: flex;
+    margin: 5px 0;
+}
+/* デフォルトのラジオボタン非表示 */
+#message-person input {
+    display: none;
+}
+/* ボタンを作成 */
+#message-person label {
+    display: block;
+    cursor: pointer;
+    width: 60px;
+    text-align: center;
+    padding: 5px;
+    background: #bdc3c7;
+    color: #fff;
+}
+/* チェックが入っている方の色を変更 */
+#message-person input[type="radio"]:checked + label{
+    background: #33415b;
+}

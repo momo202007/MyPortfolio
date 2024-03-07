@@ -1,0 +1,86 @@
+body {
+  background: #ffcc33;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.container {
+  /* 140:110:110:110(右側に10) */
+  width: 500px;
+  margin: 25px auto;
+}
+
+/* ユーザー入力 */
+#price,
+#num,
+#unit {
+  font-size: 14px;
+  box-sizing: border-box;
+  padding: 10px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  margin-right: 10px;
+}
+
+#price {
+  width: 140px;
+}
+
+#num,
+#unit {
+  width: 110px;
+}
+
+/* 「計算」ボタン */
+#btn {
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 110px;
+  height: 40px;
+  padding: 10px;
+  background: #000;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+}
+
+.input-area {
+  font-size: 0;
+  margin-bottom: 20px;
+}
+
+/* 結果表示 */
+.result-area {
+  background: #f8f8f8;
+  padding: 10px;
+  height: 100px;
+  border-radius: 5px;
+  position: relative;
+}
+
+#reset {
+  text-decoration: underline;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+#btn.disabled {
+  opacity: .5;
+}
+
+#reset.hid {
+  display: none;
+}
+
+/* 画像サイズ小さく */
+img {
+  margin: 10px;
+  width: 350px;
+  height: 350px;
+}

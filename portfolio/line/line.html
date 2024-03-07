@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINE風チャット</title>
+    <link rel="stylesheet" href="./line.css">
+    <link rel="shortcut icon" href="../images/icon.ico">
+    <script src="./jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="content">
+        <!-- 見出し -->
+        <h2>LINE風チャット画面</h2>
+        <p>～文字を入力し、送り主を選択。「送信」してください～</p>
+        <!-- タイトル -->
+        <div id="chat-title">プログラミング勉強</div>
+        <!-- チャットエリア -->
+        <div id="chat-area">
+            <div class="message-container container-me">
+                <p class="chat-time">15:05</p>
+                <p class="chat-message">こんにちは！</p>
+            </div>
+            <div class="message-container container-you">
+                <p class="chat-time">15:10</p>
+                <p class="chat-message">こんにちは～</p>
+            </div>
+        </div>
+        <!-- 入力欄 -->
+        <div id="message-person">
+            <input id="me" type="radio" value="me" name="person" checked>
+            <label for="me">あなた</label>
+            <input id="you" type="radio" value="you" name="person">
+            <label for="you">相手</label>
+        </div>
+        <div id="message-area">
+            <div class="message-text">
+                <textarea id="text"></textarea>
+            </div>
+            <div class="message-button">
+                <button id="send" class="disabled-button">送信</button>
+            </div>
+        </div>
+    </div>
+    <script src="./line.js"></script>
+</body>
+</html>

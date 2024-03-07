@@ -1,0 +1,42 @@
+/* #btn {
+  width: 500px;
+  height: 500px;
+  background-color: rgb(255, 218, 247);
+  margin: 50px auto;
+  text-align: center;
+  user-select: none;
+}
+
+#main-img {
+  cursor: pointer;
+}
+
+#main-img:hover {
+  opacity: .8;
+} */
+
+#btn {
+  width: 400px;
+  height: 400px;
+  margin: 50px auto;
+  text-align: center;
+  user-select: none;
+}
+
+h1 {
+  /* padding: 1.65rem 2rem; */
+  padding: 1.25rem 1.7rem;
+  background-color: rgba(165, 210, 255, .4);
+  background-image:
+    linear-gradient(90deg, rgba(165, 210, 255, .3) 50%, transparent 50%),
+    linear-gradient(rgba(165, 210, 255, .3) 50%, transparent 50%);
+  background-size: 40px 40px;
+}
+
+#main-img {
+  cursor: pointer;
+}
+
+#main-img:hover {
+  opacity: .8;
+}
